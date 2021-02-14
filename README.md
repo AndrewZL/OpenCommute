@@ -18,7 +18,7 @@
 * Numpy
 * Pandas
 * sklearn
-##### Visualization requirements
+#### Visualization requirements
 * Streamlit 
 * Pydeck
 
