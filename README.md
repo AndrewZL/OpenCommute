@@ -17,6 +17,10 @@
 * Python
 * Numpy
 * Pandas
+* sklearn
+Visualization requirements
+* Streamlit 
+* Pydeck
 
 ### Data
 * Data for cyclist volumes was compiled from <a href = https://open.toronto.ca/dataset/bicycle-counts/> City of Toronto Transportation Services </a>
