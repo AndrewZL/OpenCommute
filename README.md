@@ -4,7 +4,7 @@
     Compiling and analyzing Toronto's cycling volumes and accidents to create an accessible measure of cyclist safety  
     <br />
     
-![GNU License][license-shield]
+<!-- ![GNU License][license-shield] -->
 ![Version][version-shield]
 
 
