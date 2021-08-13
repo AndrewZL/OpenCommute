@@ -38,7 +38,8 @@ vol['z'] = z
 cur_time = datetime.now().hour
 
 st.write("# Complete Injury Data")
-st.write(pdk.Deck(
+st.write(
+    pdk.Deck(
     map_style="mapbox://styles/mapbox/streets-v8",
     initial_view_state={
         "latitude": init_pos[0],
@@ -54,7 +55,8 @@ st.write(pdk.Deck(
             opacity=0.9
         ),
     ],
-))
+    )
+)
 
 st.write("# Complete Volume Data")
 st.write(pdk.Deck(
