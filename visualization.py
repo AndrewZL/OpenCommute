@@ -24,7 +24,7 @@ st.write(
         layers=[
             pdk.Layer(
                 "HeatmapLayer",
-                data=inj[['LATITUDE', 'LONGITUDE']],
+                data=inj.df[['LATITUDE', 'LONGITUDE']],
                 get_position=["LONGITUDE", "LATITUDE"],
                 opacity=0.9
             ),
@@ -44,7 +44,7 @@ st.write(pdk.Deck(
     layers=[
         pdk.Layer(
             "HeatmapLayer",
-            data=vol[['Lat', 'Long', 'Volume']],
+            data=vol.df[['Lat', 'Long', 'Volume']],
             get_position=["Long", "Lat"],
             get_weight=["Volume"],
             opacity=0.9
@@ -63,7 +63,7 @@ st.write(pdk.Deck(
     layers=[
         pdk.Layer(
             "HeatmapLayer",
-            data=vol[['x', 'y', 'z']],
+            data=vol.df[['x', 'y', 'z']],
             get_position=['y', 'x'],
             get_weight=['z'],
             opacity=0.9
@@ -74,7 +74,7 @@ st.write(pdk.Deck(
 st.write("# Hourly Data")
 # Todo: Convert Data to 24 Hour
 hour_to_filter = st.slider('Hour', 0, 23, cur_time, key=0)
-hour_data = inj[inj['HOUR'] == hour_to_filter]
+hour_data = inj.df[inj.df['HOUR'] == hour_to_filter]
 
 st.write(pdk.Deck(
     map_style="mapbox://styles/mapbox/streets-v8",
@@ -96,7 +96,7 @@ st.write(pdk.Deck(
 
 st.write("# Volume Hourly Data")
 hour_to_filter_vol = st.slider('Hour', 0, 23, cur_time)
-hour_data_vol = vol[vol['Hour'] == str(hour_to_filter_vol)]
+hour_data_vol = vol.df[vol.df['Hour'] == str(hour_to_filter_vol)]
 
 st.write(pdk.Deck(
     map_style="mapbox://styles/mapbox/streets-v8",
