@@ -9,7 +9,7 @@ from datetime import datetime
 inj = pd.read_csv('Data/KSI_CLEAN2.csv')
 init_pos = [np.average(inj["LATITUDE"]), np.average(inj["LONGITUDE"])]
 
-vol = pd.read_csv('Data/CVD-NoTrails.csv')
+vol = pd.read_csv('Data/raw/Cyclist_Volume_Data/CVD-NoTrails.csv')
 
 # Max/Min Lat and Longs
 # 43.59204825
